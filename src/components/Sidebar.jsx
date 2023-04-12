@@ -1,9 +1,26 @@
-import { Box } from '@mui/material'
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
 import React from 'react'
+import { dataList } from '../data';
 
 const Sidebar = () => {
     return (
-        <Box bgcolor='skyblue' flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>Sidebar</Box>
+        <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+            <Box position='fixed'>
+                {dataList.map((dt, i) =>
+                    <List>
+                        <ListItem disablePadding>
+                            <ListItemButton component="a" href='#home'>
+                                <ListItemIcon>
+                                    {dt.img}
+                                </ListItemIcon>
+                                {dt.id === 8 ? <Switch /> : <ListItemText primary={dt.name} />}
+                            </ListItemButton>
+                        </ListItem>
+                    </List>
+                )}
+            </Box>
+        </Box>
+
     )
 }
 
