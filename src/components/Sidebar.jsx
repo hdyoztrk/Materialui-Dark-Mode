@@ -2,7 +2,7 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch
 import React from 'react'
 import { dataList } from '../data';
 
-const Sidebar = () => {
+const Sidebar = ({ mode, setMode }) => {
     return (
         <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
             <Box position='fixed'>
@@ -13,7 +13,7 @@ const Sidebar = () => {
                                 <ListItemIcon>
                                     {dt.img}
                                 </ListItemIcon>
-                                {dt.id === 8 ? <Switch /> : <ListItemText primary={dt.name} />}
+                                {dt.id === 8 ? <Switch onChange={e => setMode(mode === "light" ? "dark" : "light")} /> : <ListItemText primary={dt.name} />}
                             </ListItemButton>
                         </ListItem>
                     </List>

@@ -36,7 +36,7 @@ const Navbar = () => {
             <StyleToolbar>
                 <Typography variant='h5' sx={{ display: { xs: "none", sm: "block" } }}>Logo</Typography>
                 <CodeIcon sx={{ display: { xs: "block", sm: "none" } }} />
-                <Search><InputBase placeholder='Search...' /></Search>
+                <Search ><InputBase placeholder='Search...' /></Search>
                 <Icons>
                     <Badge badgeContent={4} color="error">
                         <MailIcon />
@@ -48,7 +48,7 @@ const Navbar = () => {
                 </Icons>
                 <UserBox onClick={e => setOpen(true)}>
                     <Avatar sx={{ width: 30, height: 30, bgcolor: "#d1c4e9" }}>A</Avatar>
-                    <Typography>User</Typography>
+                    <Typography mr={2}>User</Typography>
                 </UserBox>
             </StyleToolbar>
             <Menu
