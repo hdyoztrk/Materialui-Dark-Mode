@@ -7,8 +7,6 @@ const Feed = () => {
             <SharedPosts />
             <SharedPosts />
             <SharedPosts />
-            <SharedPosts />
-            <SharedPosts />
         </Box>
     )
 }

@@ -27,8 +27,6 @@ const UserBox = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up("sm")]: { display: "none" }
 }))
 
-
-
 const Navbar = () => {
     const [open, setOpen] = useState(false)
     return (
@@ -38,7 +36,7 @@ const Navbar = () => {
                 <CodeIcon sx={{ display: { xs: "block", sm: "none" } }} />
                 <Search ><InputBase placeholder='Search...' /></Search>
                 <Icons>
-                    <Badge badgeContent={4} color="error">
+                    <Badge badgeContent={1} color="error">
                         <MailIcon />
                     </Badge>
                     <Badge badgeContent={2} color="error">

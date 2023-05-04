@@ -20,7 +20,6 @@ const Sidebar = ({ mode, setMode }) => {
                 )}
             </Box>
         </Box>
-
     )
 }
 
